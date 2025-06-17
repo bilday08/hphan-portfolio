@@ -1,0 +1,46 @@
+---
+title: "NextSight – Industrial Defect Inspection System"
+publishedAt: "2021"
+summary: "A real-time AI-based defect inspection system deployed in industrial manufacturing lines to automate and accelerate QA/QC processes."
+images:
+  - "/images/projects/nextsight/nextsight.png"
+  - "/images/projects/nextsight/nextsight_1.png"
+team:
+  - name: "Phan Hong Hanh"
+    role: "Software Engineer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/hanhphan812"
+link: "https://nextrobotics.io/portfolio/nextsight/"
+---
+
+## Overview
+
+NextSight is an industrial defect inspection system using deep learning to automate the quality control process in manufacturing lines. It addresses the challenges of manual product checking such as inconsistency, slow speed, and high labor costs. The system has been deployed at Hoya Glass Disk with additional POC rollouts at Hoya Lens and demo machines at Tran Hiep Thanh.
+
+## Key Features
+
+- Real-time processing of 3000x3000 pixel images in under 100ms using a tile-based segmentation strategy.
+- Supports up to 7 optical modes (for Hoya Disk) and 4 modes (for Hoya Lens) to highlight various defect types under different lighting conditions.
+- Detects defects as small as 10μm (Hoya Disk) and 0.1mm (Hoya Lens).
+- Transitioned UI from Avalonia/C# to Qt/C++ for deployable versions.
+- Integrated with industrial cameras and adapted to diverse factory lighting environments.
+
+## Technologies Used
+
+- **Deep Learning Models**: DeepLabV3 (initial), LR-ASPP MobileNetV3 Large (production).
+- **Languages**: Python (training), C++ (backend), C# (early UI), Qt (final UI).
+- **Tooling**: Git, CMake, Qt, ONNX, TensorRT via ONNX Runtime.
+
+## Challenges and Learnings
+
+- Transparent or semi-transparent materials introduced noise that mimicked small defects, making classification harder.
+- Ambient lighting conditions and optical reflection variances created inconsistency across samples.
+- Feedback loop with customers proved crucial for iterative calibration and defect retraining.
+- Real-world deployment taught the importance of flexibility in system configuration and rapid calibration protocols.
+
+## Outcome
+
+- Reduced manual QC inspection time from over 5 seconds to under 1 second per unit.
+- Achieved over 95% defect detection accuracy in production.
+- Deployed in production at Hoya Glass Disk since September 2024.
+- Ongoing PoC at Hoya Lens since March 2025.

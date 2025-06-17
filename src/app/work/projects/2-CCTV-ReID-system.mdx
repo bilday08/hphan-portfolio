@@ -1,0 +1,48 @@
+---
+title: "NextEyes - Real-time Camera Management Software Integrated With AI"
+publishedAt: "2021"
+summary: "A real-time AI system for identifying and tracking individuals across multiple surveillance cameras, with partial overlapping and non-overlapping views."
+images:
+  - "/images/projects/nexteye/nexteye_01.png"
+  - "/images/projects/cctv/cctv.png"
+  - "/images/projects/cctv/cctv_1.png"
+  - "/images/projects/cctv/cctv.mp4"
+team:
+  - name: "Phan Hong Hanh"
+    role: "Software Engineer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/hanhphan812"
+link: "https://nextrobotics.io/portfolio/nexteye/"
+---
+
+## Overview
+
+The CCTV ReID system was developed to help track people across multiple surveillance cameras with both overlapping and non-overlapping fields of view. It supports identity continuity even when the same person moves through different camera zones, ensuring area access monitoring, identity recognition, and trajectory tracking. The PoC involved 4 fixed-position cameras and was demonstrated live to SoftBank Japan.
+
+## Key Features
+
+- Combined person detection (YOLOv5) with face embeddings (RetinaFace + ArcFace) for multi-modal ReID.
+- Used vector embeddings of both faces and full-body appearance stored in a vector database.
+- Implemented fallback re-identification via feature matching even when face was not visible.
+- Integrated post-processing with ID filtering and cross-camera matching.
+- Visualized trajectory tracking on a 2D mapped web interface showing movement across zones.
+
+## Technologies Used
+
+- **Detection**: YOLOv5 (pretrained), RetinaFace.
+- **Embedding**: ArcFace, DeepStream-optimized feature extraction.
+- **Platform**: DeepStream SDK (Python pipeline), Jetson Orin, RTX 3090.
+
+## Challenges and Learnings
+
+- Occlusion or similar clothing sometimes caused ID switching or duplication.
+- Lighting and camera angles significantly impacted body feature consistency.
+- Real-time processing required frame rate reduction on Jetson Orin (15 FPS vs 30+ FPS on RTX).
+- Edge deployment required architecture-independent, cross-platform code and optimization.
+- Learned to work with hardware constraints and keep unified logic for multi-device deployment.
+
+## Outcome
+
+- Successful live demo with SoftBank Japan; stakeholders satisfied and approved next deployment phases.
+- Real-time trajectory mapping confirmed accurate cross-camera tracking.
+- Initial architecture designed to scale toward 500+ cameras in production.
