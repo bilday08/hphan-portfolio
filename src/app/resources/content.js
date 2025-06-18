@@ -37,11 +37,6 @@ const social = [
     link: "https://www.linkedin.com/in/hanhphan812",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
-  {
     name: "Email",
     icon: "email",
     link: "mailto:phanhonghanh0812@gmail.com",
@@ -81,7 +76,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Software Engineer with over 2 years of experience delivering AI-integrated software, cloud solutions, and web systems across industrial, fintech, and outsourcing domains. <br />
+        Software Engineer with over 2 years of experience delivering AI-integrated software, cloud solutions, and web systems across industrial, fintech and outsourcing domains. <br />
         {/* <br /> - Proven expertise in building high-performance, low-latency pipelines (under 100ms) on both edge (Jetson) and server (RTX) platforms. 
         <br /> - Adept at bridging applied research and deployment, driving end-to-end development from model design to system integration. 
         <br /> - Strong leadership in mentoring junior engineers, collaborating across teams, and aligning AI solutions with real-world operational goals. */}
